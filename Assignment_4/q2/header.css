@@ -1,0 +1,11 @@
+.header{
+    background-color:lightgreen;
+    padding:13px;
+    text-align:center;
+   display:block;
+    margin-left:0px;
+    transition:background-color 0.5s
+}
+/* .header:hover{
+    background-color:green;
+} */

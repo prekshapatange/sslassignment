@@ -1,0 +1,1 @@
+grep -c "usr" result.txt

@@ -1,0 +1,1 @@
+grep -v "usr" result.txt | head -n 2

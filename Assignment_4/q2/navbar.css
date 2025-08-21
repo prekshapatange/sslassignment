@@ -1,0 +1,15 @@
+
+.navbar {
+    text-decoration:none;
+    color:black;
+   padding:10px;
+    margin:5px;
+    transition:background-color 0.15s;
+
+}
+.navbar:hover{
+    background-color:green;
+   color:white;
+  padding:10px;
+   margin:5px;
+}

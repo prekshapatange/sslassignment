@@ -1,0 +1,12 @@
+.footer_content{
+    background-color:lightskyblue;
+    padding:13px;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+.footer_content p{
+    margin:0;
+    font-size:16px;
+
+}

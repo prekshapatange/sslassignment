@@ -1,0 +1,76 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>
+			Form
+		</title>
+			<link rel="stylesheet" href="fonts.css">
+			<link rel="stylesheet" href="form_container.css">
+			<link rel="stylesheet" href="form_group.css">
+			<link rel="stylesheet" href="submit_btn.css">
+					       
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+	<body>
+		<div class="form_container">
+				<h1><center>Registration Form</center></h1>
+				<form>
+				<div class="form_group">
+				<label for="username">Name:</label>
+                <input type="text" id="username" name="username" pattern="[A-Za-z\s]+" title="only English is allowed" required>
+				</div>
+				<br>
+				<div class="form_group">
+				<label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+			</div>
+				<br>
+				<div class="form_group">
+				<label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+			</div>
+				<br>
+				<div class="form_group">
+				<label>Gender:</label>
+				<br>
+				
+				<input type="radio" id="male" name="gender" value="male" required>
+				<br>
+				<label for="male">Male</label>
+				<br>
+				
+				<input type="radio" id="female" name="gender" value="female" required><br>
+				<label for="female">Female</label>
+				<br>
+				
+				<input type="radio" id="other" name="gender" value="other" required><br>
+				<label for="other">Other</label>
+				<br>
+
+				</div>
+
+
+				<div class="form_group">
+					<label> Hobbies: </label>
+					<br>
+					<input type="checkbox" id="Reading" name="hobbies" value="reading"><br>
+					<label for="reading">Reading</label>
+					<br>
+					<input type="checkbox" id="sports" name="hobbies" value="sports"><br>
+					<label for="sports">Sports</label>
+					<br>
+					<input type="checkbox" id="Music" name="hobbies" value="music"><br>
+					<label for="Music">Music</label>
+				</div>
+				<div class="form_group">
+					<input type="submit" value="Submit" class="submit_btn">
+				</div>
+			</form>
+		</div>
+			
+		
+	</body>
+</html>
+

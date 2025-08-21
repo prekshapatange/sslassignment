@@ -1,0 +1,83 @@
+\documentclass[twocolumn]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{abstract}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{Advanced Mathematical Analysis of Optimized
+Linear Systems in High-Dimensional Spaces}
+\author{Preksha\\
+IIT DHARWAD \\ 
+Email:preksha@gmail.com}
+
+\begin{document}
+\begin{samepage}
+\maketitle
+\renewcommand{\abstractname}{}
+\begin{abstract}\textbf{\emph{Abstract}}\textbf{---This paper provides an advanced mathematical analysis of optimization techniques for linear systems,focusing on applications in control theory and high-dimensional data analysis.Techniques such as eigenvalue decomposition, matrix calculus,singular value decomposition (SVD), and norm optimization are explored. These tools are applied to solve stability, efficiency, and convergence challenges in large scale linear systems.}
+\end{abstract}
+\section{Introduction}
+ Optimization and linear algebra are central in fields like control systems, signal processing, and machine learning, where linear transformations and decompositions enable effective computation. This paper extends the foundational principles by incorporating more advanced topics relevant to optimizing linear systems in high-dimensional spaces.
+ \section{Mathematical Formulation}
+ \subsection{ Eigenvalue Decomposition and Norm Optimization}
+ Eigenvalue decomposition expresses any square matrix \textbf{\(A \in \mathbb{R}^{n\times n}\) } as: 
+ \boldmath
+ \begin{equation}
+A = Q \Lambda Q^{-1}
+ \end{equation}
+\unboldmath
+ where \(\textbf{Q}\) contains the eigenvectors, and \textbf{$\Lambda$} is a diagonal matrix of eigenvalues $\lambda_{1},\lambda_{2},\ldots,\lambda_{n}$.
+  The optimization of matrix norms is crucial for controlling system behavior. The Frobenius norm of a matrix $\textbf{A}$ is defined as:
+ \begin{equation}
+     \| \textbf{A} \|_{F} = \sqrt{\sum_{i=1}^{n} \sum_{j=1}^{n} |a_{ij} |^2}
+ \end{equation} 
+\par For a symmetric positive semi-definite matrix $\textbf{A}$ , the spectral
+ norm $ \| \textbf{A} \|_2$ is the largest eigenvalue $\lambda_{max}$ of \textbf{A}:
+ \begin{equation}
+     \|A\|_{2} =\max_{1 \le i \le n} |\lambda_{i}|
+ \end{equation}
+Norm optimization is widely used in control applications to minimize energy or error magnitudes.
+\subsection{Singular Value Decomposition(SVD)}
+ The Singular Value Decomposition generalizes eigenvalue
+ decomposition to non-square matrices $\textbf{A} \in \mathbb{R}^{m \times n}$. The SVD
+ of $\textbf{A}$ is:
+\begin{equation}
+  \mathbf{A = U \textstyle{\sum}V^T } 
+\end{equation}
+ where $\textbf{U} \in \mathbb{R}^{m \times m}$ and $\textbf{V} \in \mathbb{R}^{n \times n}$ are orthongonal matrices, and $\small\sum$ $ \in \mathbb{R}^{m \times n}$ is a diagonal matrix containing the singular values $\sigma_{1}, \sigma_{2},\ldots,\sigma_{r}$, where $r=min(m,n)$.
+ \par  The SVD provides a compact representation, enabling dimensionality reduction by retaining only the largest $k$ singular values. This approach is commonly used in data compression,low-rank approximation, and control design.
+\subsection{Matrix Calculus for Optimization}
+  Matrix calculus is fundamental in computing derivatives of
+ functions involving matrices. For instance, the derivative of
+ $f(\textbf{X}) = tr(\textbf{X}^T\textbf{AX})$ with respect to $\textbf{X}$ is:
+ \begin{equation}
+     \frac{\partial f}{\partial \textbf{X}} = 2\textbf{AX}
+ \end{equation}
+ \par This result is widely applied in optimization algorithms, such as those used in backpropagation for training machine learning models.
+ \par In convex optimization, Lagrange multipliers help in minimizing functions subject to constraints. The Lagrangian function for a constraint $\textbf{Ax = b}$ is:
+\begin{equation}
+    \mathcal{L}(\textbf{x},\lambda) = g(\textbf{x}) + \lambda^T \textbf{b} - \textbf{Ax})
+\end{equation}
+The conditions for optimality are given by the Karush-Kuhn Tucker (\textbf{KKT} ) conditions:
+\begin{equation}
+    \nabla g(\textbf{x}) + \textbf{A}^T \lambda = 0
+\end{equation}
+\begin{equation}\textbf{Ax} - \textbf{b}=0\end{equation}
+\section{APPLICATION TO CONTROL SYSTEMS}
+\subsection{Stability via Lyapunav's Direct Method}
+\par  For a linear system $x =\textbf{A}x$, Lyapunov’s method determines stability by selecting a Lyapunov function $V (x) = x^T\textbf{Px}$, where \textbf{P} is positive definite. If:
+\begin{equation}
+V(x) = x^T(\textbf{A}^T\textbf{P} + \textbf{PA})x <0
+\end{equation}
+then the system is stable.
+\subsection{Linear Quadratic Regular (LQR) Optimization}
+\par  The Linear Quadratic Regulator (LQR) problem aims to minimize a cost function \emph{J} for state x and control u:
+ \begin{equation}
+ J = \int_{0}^{\infty} (x^T \textbf{Q} x + u^T \textbf{R} u) dt
+ \end{equation}
+  where \textbf{Q} and \textbf{R} are positive semi-definite matrices. The optimal control $\texttt{u}^* = \textbf{-Kx}$ stabilizes the system, with $\textbf{K}= \textbf{R}^{-1}\textbf{B}^T\textbf{P}$ where \textbf{P} satisfies the Algebraic Riccati Equation (ARE):
+ \begin{equation}
+ \textbf{A}^T\textbf{P} + \textbf{PA} - \textbf{PBR}^{-1}\textbf{B}^T\textbf{P} + \textbf{Q} =0
+ \end{equation}
+\end{samepage}
+\end{document}

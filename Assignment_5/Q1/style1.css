@@ -1,0 +1,17 @@
+.para {
+border:1px solid rgb(12, 20, 4);
+margin:20px;
+padding:10px;
+}
+.tooltip {
+    position: absolute;
+    background-color: #040404;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}

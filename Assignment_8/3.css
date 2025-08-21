@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.stopwatch-container {
+    text-align: center;
+    padding:100px;
+    background-color:rgb(211, 202, 202);
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#toggleButton {
+    background-color: green;
+    color: white;
+}
+
+#toggleButton.clicked {
+    background-color: lightgreen;
+}
+
+#resetButton {
+    background-color: red;
+    color: white;
+}
+
+#resetButton.clicked {
+    background-color: lightcoral;
+}
+
+button:active {
+    transform: scale(0.95);
+}

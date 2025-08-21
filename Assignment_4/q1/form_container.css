@@ -1,0 +1,21 @@
+.form_container{
+    width:550px;
+   
+    border:1px solid blue;
+    padding:20px;
+    
+    background-color:#f9f9f9;
+    margin:0px;
+    border-radius:5px;
+   
+ 
+    
+
+}
+body{
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    
+}
